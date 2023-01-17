@@ -29,7 +29,7 @@
 ## 🚀 Getting Started
 
 1. Clone the repository
-2. Copy `.env.example` to `.env` and fill in: 
+2. Copy `.env.example` to `.env` and fill in:
    - Auth0 credentials
    - Base/OnchainKit API keys
    - Contract addresses
