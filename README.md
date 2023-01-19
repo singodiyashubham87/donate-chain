@@ -49,4 +49,4 @@
 - Donor analytics dashboard
 - Mobile-responsive design
 
-> Built with ❤️ by Team Exception Handlers! ✨ 
+> Built with ❤️ by Team Exception Handlers!✨ 
