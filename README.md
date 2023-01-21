@@ -2,7 +2,7 @@
 
 **DonateChain** is a decentralized donation platform designed to bring **trust, transparency, and real-time insights** to charitable giving. Powered by **Base** (Ethereum L2), it modernizes how people support NGOs and track the impact of their donations.
 
-## 🎯 Core Features 
+## 🎯 Core Features
 
 - 🔗 **Blockchain-Based Donations**  
   Secure and transparent donations recorded on Base (Ethereum L2), with real-time tracking
