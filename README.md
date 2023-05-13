@@ -20,7 +20,7 @@
 
 | Layer            | Technology                               |
 |------------------|------------------------------------------|
-| Frontend         | [Next.js](https://nextjs.org/ ) 13.5      |
+| Frontend         | [Next.js](https://nextjs.org/) 13.5      |
 | UI Components    | [ShadCN UI](https://ui.shadcn.com/)      |
 | Styling          | [Tailwind CSS](https://tailwindcss.com/) |
 | Blockchain       | [Base](https://base.org/) (L2 Ethereum)  |
