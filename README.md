@@ -18,7 +18,7 @@
 
 ## 🛠 Tech Stack
 
-| Layer            | Technology                                |
+| Layer            | Technology                               |
 |------------------|------------------------------------------|
 | Frontend         | [Next.js](https://nextjs.org/) 13.5      |
 | UI Components    | [ShadCN UI](https://ui.shadcn.com/)      |
