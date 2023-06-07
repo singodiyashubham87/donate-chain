@@ -24,7 +24,7 @@
 | UI Components    | [ShadCN UI](https://ui.shadcn.com/)      |
 | Styling          | [Tailwind CSS](https://tailwindcss.com/) |
 | Blockchain       | [Base](https://base.org/) (L2 Ethereum)  |
-| Authentication   | [Auth0](https://auth0.com/)              |
+| Authentication   | [Auth0](https://auth0.com/ )              |
 
 ## 🚀 Getting Started
 
