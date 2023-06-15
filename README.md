@@ -25,7 +25,6 @@
 | Styling          | [Tailwind CSS](https://tailwindcss.com/) |
 | Blockchain       | [Base](https://base.org/) (L2 Ethereum)  |
 | Authentication   | [Auth0](https://auth0.com/)              |
-| Smart Wallet     | [OnchainKit](https://onchainkit.com/)    |
 
 ## 🚀 Getting Started
 
