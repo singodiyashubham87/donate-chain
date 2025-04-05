@@ -1,4 +1,4 @@
-'use client'
+&'use client'
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,7 @@ const team = [
   { id: 1, name: "Shubham Singodiya", role: "Full-Stack Developer" },
   { id: 2, name: "Kashika Gupta", role: "UI/UX Designer" },
   { id: 3, name: "Vidip Ghosh", role: "Full-Stack + Blockchain Developer" },
-  { id: 4, name: "Ayush Gupta", role: "Full-Stack + Blockchain Developer" },
+  { id: 4, name: "Ayush Yadav", role: "Full-Stack + Blockchain Developer" },
 ];
 
 // Simulated Aptos wallet connection (replace with real integration)
