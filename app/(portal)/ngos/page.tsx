@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,8 @@ const mockNGOs = [
   {
     id: 1,
     name: "Seva Foundation",
-    description: "Providing education and healthcare to underprivileged children in rural India.",
+    description:
+      "Providing education and healthcare to underprivileged children in rural India.",
     impact: "5000+ children impacted",
     donationGoal: 10000,
     donatedAmount: 7500,
@@ -20,7 +21,8 @@ const mockNGOs = [
   {
     id: 2,
     name: "Green India Initiative",
-    description: "Planting trees and promoting sustainable farming in drought-hit areas.",
+    description:
+      "Planting trees and promoting sustainable farming in drought-hit areas.",
     impact: "10,000+ trees planted",
     donationGoal: 5000,
     donatedAmount: 3200,
@@ -29,7 +31,8 @@ const mockNGOs = [
   {
     id: 3,
     name: "Women Empowerment Network",
-    description: "Supporting skill development and financial independence for women in India.",
+    description:
+      "Supporting skill development and financial independence for women in India.",
     impact: "2000+ women trained",
     donationGoal: 8000,
     donatedAmount: 4500,
@@ -39,7 +42,9 @@ const mockNGOs = [
 
 // Simulated Aptos wallet connection (replace with real integration)
 const connectWallet = () => {
-  alert("Connecting to Aptos wallet... (Placeholder for @aptos-labs/wallet-adapter)");
+  alert(
+    "Connecting to Aptos wallet... (Placeholder for @aptos-labs/wallet-adapter)"
+  );
   // Integrate with Aptos wallet adapter here
 };
 
@@ -60,7 +65,11 @@ const NGOs = () => {
   // Handle donation submission (placeholder)
   const handleDonate = () => {
     if (selectedNGO && donationAmount > 0) {
-      alert(`Donating ${donationAmount} APT to ${mockNGOs[selectedNGO - 1].name} at address ${mockNGOs[selectedNGO - 1].address}`);
+      alert(
+        `Donating ${donationAmount} APT to ${
+          mockNGOs[selectedNGO - 1].name
+        } at address ${mockNGOs[selectedNGO - 1].address}`
+      );
       // Add Aptos transaction logic here (e.g., using @aptos-labs/ts-sdk)
       setDonationAmount(0);
       setSelectedNGO(null);
@@ -73,12 +82,17 @@ const NGOs = () => {
     <div className="container py-20 mx-auto">
       <h1 className="text-4xl font-bold text-center mb-8">Explore NGOs</h1>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        Discover and support verified Indian NGOs working on impactful causes. Browse through our list of trusted organizations and make a difference today using Aptos blockchain for transparency.
+        Discover and support verified Indian NGOs working on impactful causes.
+        Browse through our list of trusted organizations and make a difference
+        today using Aptos blockchain for transparency.
       </p>
 
       {/* Connect Wallet Section */}
       <div className="text-center mb-12">
-        <Button onClick={connectWallet} className="bg-green-600 hover:bg-green-700 text-white">
+        <Button
+          onClick={connectWallet}
+          className="bg-green-600 hover:bg-green-700 text-white"
+        >
           <Globe className="mr-2 h-4 w-4" /> Connect Aptos Wallet
         </Button>
       </div>
@@ -95,12 +109,19 @@ const NGOs = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">{ngo.description}</p>
-              <p className="text-sm text-muted-foreground mb-2">Impact: {ngo.impact}</p>
+              <p className="text-sm text-muted-foreground mb-2">
+                Impact: {ngo.impact}
+              </p>
               <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
                 <div
                   className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
-                  style={{ width: `${getProgress(ngo.donatedAmount, ngo.donationGoal)}%` }}
-                ></div>
+                  style={{
+                    width: `${getProgress(
+                      ngo.donatedAmount,
+                      ngo.donationGoal
+                    )}%`,
+                  }}
+                />
               </div>
               <p className="text-sm mb-4">
                 Donated: ${ngo.donatedAmount} / ${ngo.donationGoal}
@@ -122,7 +143,10 @@ const NGOs = () => {
                     className="w-full p-2 border rounded mb-2"
                     min="1"
                   />
-                  <Button onClick={handleDonate} className="w-full bg-purple-600 text-white hover:bg-purple-700">
+                  <Button
+                    onClick={handleDonate}
+                    className="w-full bg-purple-600 text-white hover:bg-purple-700"
+                  >
                     <Heart className="mr-2 h-4 w-4" /> Donate Now
                   </Button>
                 </div>
@@ -142,9 +166,11 @@ const NGOs = () => {
           <div
             className="bg-green-600 h-6 rounded-full transition-all duration-500"
             style={{ width: "60%" }} // Simulated progress (replace with real data)
-          ></div>
+          />
         </div>
-        <p className="text-sm text-muted-foreground">60% of yearly goal achieved!</p>
+        <p className="text-sm text-muted-foreground">
+          60% of yearly goal achieved!
+        </p>
       </div>
 
       {/* Back to Home */}
