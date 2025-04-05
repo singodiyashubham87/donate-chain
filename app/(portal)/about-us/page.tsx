@@ -29,9 +29,10 @@ const milestones = [
 ];
 
 const team = [
-  { id: 1, name: "Anika Sharma", role: "Founder & Blockchain Developer" },
-  { id: 2, name: "Rohan Patel", role: "UI/UX Designer" },
-  { id: 3, name: "Priya Mehta", role: "Community Manager" },
+  { id: 1, name: "Shubham Singodiya", role: "Full-Stack Developer" },
+  { id: 2, name: "Kashika Gupta", role: "UI/UX Designer" },
+  { id: 3, name: "Vidip Ghosh", role: "Full-Stack + Blockchain Developer" },
+  { id: 4, name: "Ayush Gupta", role: "Full-Stack + Blockchain Developer" },
 ];
 
 // Simulated Aptos wallet connection (replace with real integration)
@@ -130,7 +131,7 @@ const AboutUs = () => {
         <h2 className="text-2xl font-semibold text-center mb-6">
           Meet Our Team
         </h2>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {team.map((member) => (
             <Card key={member.id} className="hover:shadow-lg transition-shadow">
               <CardHeader>
