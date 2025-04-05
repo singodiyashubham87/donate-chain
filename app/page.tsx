@@ -5,9 +5,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <MainNav />
-      
+    <div className="flex items-center justify-center min-h-screen flex-col">    
       {/* Hero Section */}
       <section className="relative">
         <div className="container flex flex-col items-center justify-center space-y-4 py-32 text-center md:py-36 lg:py-40">
@@ -28,9 +26,6 @@ export default function Home() {
                 Explore NGOs
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </Button>
-            <Button variant="outline" size="lg">
-              Learn More
             </Button>
           </div>
         </div>

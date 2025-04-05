@@ -12,12 +12,12 @@ export function MainNav() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="flex h-16 items-center justify-around">
+        <div className="flex">
+          <Link href="/" className="flex items-center space-x-2">
             <span className="font-bold">DonateChain</span>
           </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="ml-8 flex items-center gap-4 text-sm font-medium">
             <Link
               href="/ngos"
               className={cn(
@@ -28,16 +28,16 @@ export function MainNav() {
               NGOs
             </Link>
             <Link
-              href="/about"
+              href="/about-us"
               className={cn(
                 'transition-colors hover:text-foreground/80',
-                pathname === '/about' ? 'text-foreground' : 'text-foreground/60'
+                pathname === '/about-us' ? 'text-foreground' : 'text-foreground/60'
               )}
             >
               About
             </Link>
             <Link
-              href="/contact"
+              href="/contact-us"
               className={cn(
                 'transition-colors hover:text-foreground/80',
                 pathname === '/contact' ? 'text-foreground' : 'text-foreground/60'
@@ -47,7 +47,7 @@ export function MainNav() {
             </Link>
           </nav>
         </div>
-        <div className="ml-auto flex items-center space-x-4">
+        <div className="flex items-center space-x-4">
           <ThemeToggle />
           <Button asChild>
             <Link href="/ngos">Start Donating</Link>
