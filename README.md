@@ -9,9 +9,6 @@
 - 🔗 **Blockchain-Based Donations**  
   Donations are recorded immutably on the **Base** Layer 2 blockchain, ensuring transparency and security.
 
-- 🎖 **NFT Certificates for Donors**
-  Automatically mint NFT-based donor certificates on successful donations to gamify and recognize contributions.
-
 - 📊 **Real-Time Donation Feed with Fluvio**  
   Every donation is streamed in real-time using **Fluvio**, enabling dynamic dashboards and instant visibility.
 
