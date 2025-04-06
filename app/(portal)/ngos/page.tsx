@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Globe, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import IntegrateWallet from "@/components/integrate-wallet";
 
 // Mock data for NGOs (replace with real data from Base blockchain or API)
 const mockNGOs = [
@@ -41,28 +42,23 @@ const mockNGOs = [
 ];
 
 // Simulated Base wallet connection (replace with real integration)
-const connectWallet = () => {
-  alert(
-    "Connecting to Base wallet... (Placeholder for @Base-labs/wallet-adapter)"
-  );
-  // Integrate with Base wallet adapter here
-};
 
 const NGOs = () => {
   const [donationAmount, setDonationAmount] = useState<number>(0);
   const [selectedNGO, setSelectedNGO] = useState<number | null>(null);
+  const [showWallet, setShowWallet] = useState<boolean>(false);
 
-  // Simulate fetching donation data (replace with Base blockchain query)
+  const connectWallet = () => {
+    setShowWallet(!showWallet);
+  };
+
   useEffect(() => {
-    // In a real scenario, fetch data from Base blockchain using an API or SDK
     console.log("Fetching donation data from Base...");
   }, []);
 
-  // Calculate donation progress
   const getProgress = (donated: number, goal: number) =>
     Math.min((donated / goal) * 100, 100);
 
-  // Handle donation submission (placeholder)
   const handleDonate = () => {
     if (selectedNGO && donationAmount > 0) {
       alert(
@@ -70,7 +66,6 @@ const NGOs = () => {
           mockNGOs[selectedNGO - 1].name
         } at address ${mockNGOs[selectedNGO - 1].address}`
       );
-      // Add Base transaction logic here (e.g., using @base-labs/ts-sdk)
       setDonationAmount(0);
       setSelectedNGO(null);
     } else {
@@ -87,13 +82,10 @@ const NGOs = () => {
         today using Base blockchain for transparency.
       </p>
 
-      {/* Connect Wallet Section */}
       <div className="text-center mb-12">
-        <Button
-          onClick={connectWallet}
-          className="bg-green-600 hover:bg-green-700 text-white"
-        >
-          <Globe className="mr-2 h-4 w-4" /> Connect Base Wallet
+        <Button className="bg-green-600 hover:bg-green-700 text-white">
+          <Globe className="h-4 w-4" />
+          <IntegrateWallet />
         </Button>
       </div>
 

@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { MainNav } from '@/components/main-nav';
 import { Heart, ArrowRight, Sparkles, Shield, Globe } from 'lucide-react';
 import Link from 'next/link';
 
