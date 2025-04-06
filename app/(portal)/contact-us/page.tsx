@@ -32,10 +32,6 @@ const ContactUs = () => {
     // Add API or Base blockchain submission logic here
   };
 
-  const connectWallet = () => {
-    alert("Connecting to Base wallet for secure support... (Placeholder for @base-labs/wallet-adapter)");
-  };
-
   return (
     <div className="container py-20 mx-auto">
       <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
@@ -86,16 +82,6 @@ const ContactUs = () => {
             </p>
           </CardContent>
         </Card>
-      </div>
-
-      {/* Connect Wallet Section */}
-      <div className="text-center mb-12">
-        <Button onClick={connectWallet} className="bg-purple-600 hover:bg-purple-700 text-white">
-          <Globe className="mr-2 h-4 w-4" /> Connect Base Wallet
-        </Button>
-        <p className="text-sm text-muted-foreground mt-2">
-          Secure your inquiries with your Base wallet for verified support.
-        </p>
       </div>
 
       {/* Live Support Status */}
