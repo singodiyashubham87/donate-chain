@@ -29,20 +29,18 @@ const ContactUs = () => {
     alert(`Thank you, ${formData.name}! Your message has been sent to support@donatechain.org.`);
     setIsSubmitted(true);
     setFormData({ name: "", email: "", message: "" }); // Reset form
-    // Add API or Aptos blockchain submission logic here
+    // Add API or Base blockchain submission logic here
   };
 
-  // Simulated Aptos wallet connection (replace with real integration)
   const connectWallet = () => {
-    alert("Connecting to Aptos wallet for secure support... (Placeholder for @aptos-labs/wallet-adapter)");
-    // Integrate with Aptos wallet adapter here
+    alert("Connecting to Base wallet for secure support... (Placeholder for @base-labs/wallet-adapter)");
   };
 
   return (
     <div className="container py-20 mx-auto">
       <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        We’re here to help! Reach out to the DonateChain team for support, inquiries, or partnership opportunities. Connect your Aptos wallet for secure communication.
+        We’re here to help! Reach out to the DonateChain team for support, inquiries, or partnership opportunities. Connect your Base wallet for secure communication.
       </p>
 
       {/* Contact Information */}
@@ -93,10 +91,10 @@ const ContactUs = () => {
       {/* Connect Wallet Section */}
       <div className="text-center mb-12">
         <Button onClick={connectWallet} className="bg-purple-600 hover:bg-purple-700 text-white">
-          <Globe className="mr-2 h-4 w-4" /> Connect Aptos Wallet
+          <Globe className="mr-2 h-4 w-4" /> Connect Base Wallet
         </Button>
         <p className="text-sm text-muted-foreground mt-2">
-          Secure your inquiries with your Aptos wallet for verified support.
+          Secure your inquiries with your Base wallet for verified support.
         </p>
       </div>
 

@@ -12,7 +12,7 @@ const milestones = [
     id: 1,
     title: "Platform Launch",
     date: "Jan 2025",
-    description: "Launched DonateChain on Aptos Devnet",
+    description: "Launched DonateChain on Base Devnet",
   },
   {
     id: 2,
@@ -35,12 +35,11 @@ const team = [
   { id: 4, name: "Ayush Yadav", role: "Full-Stack + Blockchain Developer" },
 ];
 
-// Simulated Aptos wallet connection (replace with real integration)
 const connectWallet = () => {
   alert(
-    "Connecting to Aptos wallet... (Placeholder for @aptos-labs/wallet-adapter)"
+    "Connecting to Base wallet... (Placeholder for @base-labs/wallet-adapter)"
   );
-  // Integrate with Aptos wallet adapter here
+  // Integrate with Base wallet adapter here
 };
 
 const AboutUs = () => {
@@ -49,7 +48,7 @@ const AboutUs = () => {
       <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
         Welcome to DonateChain! We are a decentralized platform built on the
-        Aptos blockchain, dedicated to connecting donors with Indian NGOs
+        Base blockchain, dedicated to connecting donors with Indian NGOs
         through transparent and efficient donations. Our mission is to empower
         social good with cutting-edge Web3 technology.
       </p>
@@ -66,7 +65,7 @@ const AboutUs = () => {
           <CardContent>
             <p className="text-gray-600">
               To create a transparent donation ecosystem where every
-              contribution is tracked on the Aptos blockchain, ensuring 100%
+              contribution is tracked on the Base blockchain, ensuring 100%
               impact for verified Indian NGOs.
             </p>
           </CardContent>
@@ -93,10 +92,10 @@ const AboutUs = () => {
           onClick={connectWallet}
           className="bg-purple-600 hover:bg-purple-700 text-white"
         >
-          <Globe className="mr-2 h-4 w-4" /> Connect Aptos Wallet
+          <Globe className="mr-2 h-4 w-4" /> Connect Wallet
         </Button>
         <p className="text-sm text-muted-foreground mt-2">
-          Explore our platform securely with your Aptos wallet.
+          Explore our platform securely with your wallet.
         </p>
       </div>
 

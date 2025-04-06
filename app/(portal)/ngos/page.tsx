@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Globe, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
-// Mock data for NGOs (replace with real data from Aptos blockchain or API)
+// Mock data for NGOs (replace with real data from Base blockchain or API)
 const mockNGOs = [
   {
     id: 1,
@@ -40,22 +40,22 @@ const mockNGOs = [
   },
 ];
 
-// Simulated Aptos wallet connection (replace with real integration)
+// Simulated Base wallet connection (replace with real integration)
 const connectWallet = () => {
   alert(
-    "Connecting to Aptos wallet... (Placeholder for @aptos-labs/wallet-adapter)"
+    "Connecting to Base wallet... (Placeholder for @Base-labs/wallet-adapter)"
   );
-  // Integrate with Aptos wallet adapter here
+  // Integrate with Base wallet adapter here
 };
 
 const NGOs = () => {
   const [donationAmount, setDonationAmount] = useState<number>(0);
   const [selectedNGO, setSelectedNGO] = useState<number | null>(null);
 
-  // Simulate fetching donation data (replace with Aptos blockchain query)
+  // Simulate fetching donation data (replace with Base blockchain query)
   useEffect(() => {
-    // In a real scenario, fetch data from Aptos blockchain using an API or SDK
-    console.log("Fetching donation data from Aptos...");
+    // In a real scenario, fetch data from Base blockchain using an API or SDK
+    console.log("Fetching donation data from Base...");
   }, []);
 
   // Calculate donation progress
@@ -70,7 +70,7 @@ const NGOs = () => {
           mockNGOs[selectedNGO - 1].name
         } at address ${mockNGOs[selectedNGO - 1].address}`
       );
-      // Add Aptos transaction logic here (e.g., using @aptos-labs/ts-sdk)
+      // Add Base transaction logic here (e.g., using @base-labs/ts-sdk)
       setDonationAmount(0);
       setSelectedNGO(null);
     } else {
@@ -84,7 +84,7 @@ const NGOs = () => {
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
         Discover and support verified Indian NGOs working on impactful causes.
         Browse through our list of trusted organizations and make a difference
-        today using Aptos blockchain for transparency.
+        today using Base blockchain for transparency.
       </p>
 
       {/* Connect Wallet Section */}
@@ -93,7 +93,7 @@ const NGOs = () => {
           onClick={connectWallet}
           className="bg-green-600 hover:bg-green-700 text-white"
         >
-          <Globe className="mr-2 h-4 w-4" /> Connect Aptos Wallet
+          <Globe className="mr-2 h-4 w-4" /> Connect Base Wallet
         </Button>
       </div>
 
