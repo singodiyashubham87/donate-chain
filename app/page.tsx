@@ -5,14 +5,17 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen flex-col">
+    <div className="flex items-center justify-center min-h-screen flex-col px-44">
       {/* Hero Section */}
       <section className="relative w-full">
         <div className="container flex flex-col items-center justify-center space-y-4 py-32 text-center md:py-36 lg:py-40">
-          <img
+          <Image
             src="/community.jpg"
             alt="Community"
-            className="absolute inset-0 h-full w-full object-cover opacity-30"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="absolute inset-0 opacity-30 z-[-1]"
           />
           <div className="space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -26,19 +29,17 @@ export default function Home() {
               contribution&apos;s journey.
             </p>
           </div>
-          <div className="flex flex-col gap-4 min-[400px]:flex-row">
-            <Button size="lg" asChild>
-              <Link href="/ngos">
-                Explore NGOs
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
         </div>
+        <Button size="lg" asChild className="absolute left-1/2 bottom-10 -translate-x-1/2">
+          <Link href="/ngos">
+            Explore NGOs
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
       </section>
 
       {/* How it Works */}
-      <section className="border-t bg-muted/50">
+      <section className="border-t bg-muted/50 w-full">
         <div className="container py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">How It Works</h2>
           <div className="grid gap-8 md:grid-cols-3">
@@ -77,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t">
+      <section className="border-t w-full">
         <div className="container py-20">
           <div className="flex flex-col items-center text-center">
             <Heart className="mb-4 h-12 w-12 text-primary" />
