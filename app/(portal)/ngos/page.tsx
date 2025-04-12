@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Globe, CheckCircle } from "lucide-react";
+import { Heart, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import IntegrateWallet from "@/components/integrate-wallet";
 
@@ -84,7 +84,6 @@ const NGOs = () => {
 
       <div className="text-center mb-12">
         <Button className="bg-green-600 hover:bg-green-700 text-white">
-          <Globe className="h-4 w-4" />
           <IntegrateWallet />
         </Button>
       </div>
