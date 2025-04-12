@@ -2,7 +2,6 @@
 
 import { base } from "wagmi/chains";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
-import { ThemeProvider } from "next-themes";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 export function Providers({ children }: { children: React.ReactNode }) {
@@ -14,7 +13,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
     throw new Error("Environment variables for Auth0 are not defined");
   }
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <OnchainKitProvider
         apiKey={process.env.NEXT_PUBLIC_ONCHAINKIT_API_KEY}
         chain={base}
@@ -34,6 +32,5 @@ export function Providers({ children }: { children: React.ReactNode }) {
           {children}
         </Auth0Provider>
       </OnchainKitProvider>
-    </ThemeProvider>
   );
 }
