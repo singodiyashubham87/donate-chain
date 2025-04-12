@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex items-center justify-center min-h-screen flex-col px-44">
       {/* Hero Section */}
-      <section className="relative w-full">
+      <section className="relative w-full flex flex-col items-center justify-center">
         <div className="container flex flex-col items-center justify-center space-y-4 py-32 text-center md:py-36 lg:py-40">
           <Image
             src="/community.jpg"
@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* How it Works */}
-      <section className="border-t bg-muted/50 w-full">
+      <section className="border-t bg-muted/50 w-full flex flex-col items-center justify-center">
         <div className="container py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">How It Works</h2>
           <div className="grid gap-8 md:grid-cols-3">
@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t w-full">
+      <section className="border-t w-full flex flex-col items-center justify-center">
         <div className="container py-20">
           <div className="flex flex-col items-center text-center">
             <Heart className="mb-4 h-12 w-12 text-primary" />
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="border-t bg-muted/50 w-full">
+      <section className="border-t bg-muted/50 w-full flex flex-col items-center justify-center">
         <div className="container py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">
             What Our Donors Say
@@ -113,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* Featured NGOs Section */}
-      <section className="border-t w-full bg-muted/50">
+      <section className="border-t w-full bg-muted/50 flex flex-col items-center justify-center">
         <div className="container py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">
             Featured NGOs
