@@ -1,13 +1,19 @@
-import { Button } from '@/components/ui/button';
-import { Heart, ArrowRight, Sparkles, Shield, Globe } from 'lucide-react';
-import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import { Heart, ArrowRight, Sparkles, Shield, Globe } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen flex-col">    
+    <div className="flex items-center justify-center min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative">
+      <section className="relative w-full">
         <div className="container flex flex-col items-center justify-center space-y-4 py-32 text-center md:py-36 lg:py-40">
+          <img
+            src="/community.jpg"
+            alt="Community"
+            className="absolute inset-0 h-full w-full object-cover opacity-30"
+          />
           <div className="space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               Empowering NGOs through
@@ -15,8 +21,9 @@ export default function Home() {
               Transparent Donations
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl">
-              Join us in creating lasting impact through blockchain-powered transparent donations.
-              Support verified Indian NGOs and track your contribution&apos;s journey.
+              Join us in creating lasting impact through blockchain-powered
+              transparent donations. Support verified Indian NGOs and track your
+              contribution&apos;s journey.
             </p>
           </div>
           <div className="flex flex-col gap-4 min-[400px]:flex-row">
@@ -41,14 +48,17 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-xl font-semibold">Verified NGOs</h3>
               <p className="text-muted-foreground">
-                We carefully verify each NGO to ensure your donations reach genuine causes
+                We carefully verify each NGO to ensure your donations reach
+                genuine causes
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Sparkles className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-semibold">Transparent Tracking</h3>
+              <h3 className="mb-2 text-xl font-semibold">
+                Transparent Tracking
+              </h3>
               <p className="text-muted-foreground">
                 Track your donations in real-time using blockchain technology
               </p>
@@ -71,9 +81,12 @@ export default function Home() {
         <div className="container py-20">
           <div className="flex flex-col items-center text-center">
             <Heart className="mb-4 h-12 w-12 text-primary" />
-            <h2 className="mb-4 text-3xl font-bold">Ready to Make a Difference?</h2>
+            <h2 className="mb-4 text-3xl font-bold">
+              Ready to Make a Difference?
+            </h2>
             <p className="mb-8 max-w-[600px] text-muted-foreground">
-              Join thousands of donors who are creating positive change through transparent giving.
+              Join thousands of donors who are creating positive change through
+              transparent giving.
             </p>
             <Button size="lg" asChild>
               <Link href="/ngos">Start Donating Now</Link>
