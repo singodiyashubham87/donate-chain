@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Loader } from "lucide-react";
 import Image from "next/image";
+import IntegrateWallet from "./integrate-wallet";
 
 export function MainNav() {
   const { user, isAuthenticated, isLoading, loginWithRedirect, logout } =
@@ -83,6 +84,9 @@ export function MainNav() {
               </Button>
             </React.Fragment>
           )}
+          <Button className="bg-green-600 hover:bg-green-700 text-white">
+            <IntegrateWallet />
+          </Button>
         </div>
       </div>
     </header>
