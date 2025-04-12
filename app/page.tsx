@@ -1,7 +1,9 @@
+import TestimonialCard from "@/components/testimonial-card";
 import { Button } from "@/components/ui/button";
 import { Heart, ArrowRight, Sparkles, Shield, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { featuredNgos } from "./data/featured-ngos";
 
 export default function Home() {
   return (
@@ -30,7 +32,11 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Button size="lg" asChild className="absolute left-1/2 bottom-10 -translate-x-1/2">
+        <Button
+          size="lg"
+          asChild
+          className="absolute left-1/2 bottom-10 -translate-x-1/2"
+        >
           <Link href="/ngos">
             Explore NGOs
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -92,6 +98,42 @@ export default function Home() {
             <Button size="lg" asChild>
               <Link href="/ngos">Start Donating Now</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="border-t bg-muted/50 w-full">
+        <div className="container py-20">
+          <h2 className="mb-12 text-center text-3xl font-bold">
+            What Our Donors Say
+          </h2>
+          <TestimonialCard />
+        </div>
+      </section>
+
+      {/* Featured NGOs Section */}
+      <section className="border-t w-full bg-muted/50">
+        <div className="container py-20">
+          <h2 className="mb-12 text-center text-3xl font-bold">
+            Featured NGOs
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3 justify-items-center text-center">
+            {featuredNgos?.map((ngo, i) => (
+              <div
+                key={ngo?.id}
+                className="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 p-6 rounded-xl shadow-md w-full max-w-sm"
+              >
+                <h3 className="text-xl font-semibold mb-2">{ngo?.name}</h3>
+                <p className="text-muted-foreground mb-4">{ngo?.desc}</p>
+                <Link
+                  href={ngo?.link}
+                  className="text-primary font-medium hover:underline"
+                >
+                  Learn More →
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
