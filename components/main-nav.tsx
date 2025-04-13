@@ -84,9 +84,7 @@ export function MainNav() {
               </Button>
             </React.Fragment>
           )}
-          <Button className="bg-green-600 hover:bg-green-700 text-white">
-            <IntegrateWallet />
-          </Button>
+          <IntegrateWallet />
         </div>
       </div>
     </header>
