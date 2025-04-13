@@ -82,11 +82,9 @@ const NGOs = () => {
         today using Base blockchain for transparency.
       </p>
 
-      <div className="text-center mb-12">
-        <Button className="bg-green-600 hover:bg-green-700 text-white">
-          <IntegrateWallet />
-        </Button>
-      </div>
+      {/* <div className="text-center mb-12 w-full flex justify-center">
+        <IntegrateWallet />
+      </div> */}
 
       {/* NGO List */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
