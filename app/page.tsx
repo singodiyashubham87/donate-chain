@@ -15,9 +15,7 @@ export default function Home() {
             src="/community.jpg"
             alt="Community"
             layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            className="absolute inset-0 opacity-30 z-[-1]"
+            className="absolute inset-0 opacity-30 z-[-1] object-cover object-center"
           />
           <div className="space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">

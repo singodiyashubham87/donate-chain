@@ -13,6 +13,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
     throw new Error("Environment variables for Auth0 are not defined");
   }
   return (
+    <Auth0Provider
+      domain={AUTH0_DOMAIN}
+      clientId={AUTH0_CLIENT_ID}
+      authorizationParams={{
+        redirect_uri: AUTH0_REDIRECT_URI,
+      }}
+    >
       <OnchainKitProvider
         apiKey={process.env.NEXT_PUBLIC_ONCHAINKIT_API_KEY}
         chain={base}
@@ -22,15 +29,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
           },
         }}
       >
-        <Auth0Provider
-          domain={AUTH0_DOMAIN}
-          clientId={AUTH0_CLIENT_ID}
-          authorizationParams={{
-            redirect_uri: AUTH0_REDIRECT_URI,
-          }}
-        >
-          {children}
-        </Auth0Provider>
+        {children}
       </OnchainKitProvider>
+    </Auth0Provider>
   );
 }
