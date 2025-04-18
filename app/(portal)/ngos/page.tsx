@@ -9,39 +9,8 @@ import { ethers } from "ethers";
 import { useWallet } from "../../context/WalletContext";
 import contractABI from "../../contracts/abi";
 import { toast } from "react-toastify";
-
-const mockNGOs = [
-  {
-    id: 1,
-    name: "Seva Foundation",
-    description:
-      "Providing education and healthcare to underprivileged children in rural India.",
-    impact: "5000+ children impacted",
-    donationGoal: 10000,
-    donatedAmount: 7500,
-    address: "0x1...seva",
-  },
-  {
-    id: 2,
-    name: "Green India Initiative",
-    description:
-      "Planting trees and promoting sustainable farming in drought-hit areas.",
-    impact: "10,000+ trees planted",
-    donationGoal: 5000,
-    donatedAmount: 3200,
-    address: "0x2...green",
-  },
-  {
-    id: 3,
-    name: "Women Empowerment Network",
-    description:
-      "Supporting skill development and financial independence for women in India.",
-    impact: "2000+ women trained",
-    donationGoal: 8000,
-    donatedAmount: 4500,
-    address: "0x3...women",
-  },
-];
+import { mockNGOs } from "@/app/data/ngos";
+import Analytics from "./analytics";
 
 const NGOs = () => {
   const [donationAmount, setDonationAmount] = useState<number>(0);
@@ -171,7 +140,7 @@ const NGOs = () => {
       </div>
 
       {/* Creative Usage Tracking (Impact Meter) */}
-      <div className="mt-12 text-center">
+      <div className="my-12 text-center">
         <h2 className="text-2xl font-semibold mb-4">Total Impact Meter</h2>
         <p className="text-gray-600 mb-4">
           Track the collective impact of donations across all NGOs.
@@ -186,6 +155,8 @@ const NGOs = () => {
           60% of yearly goal achieved!
         </p>
       </div>
+
+      <Analytics />
 
       {/* Back to Home */}
       <div className="text-center mt-12">
