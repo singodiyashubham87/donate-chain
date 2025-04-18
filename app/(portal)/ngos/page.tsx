@@ -117,7 +117,7 @@ const NGOs = () => {
       </div> */}
 
       {/* NGO List */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 grid-cols-1 w-1/2 mx-auto">
         {mockNGOs.map((ngo) => (
           <Card key={ngo.id} className="hover:shadow-lg transition-shadow">
             <CardHeader>
@@ -145,15 +145,24 @@ const NGOs = () => {
               <p className="text-sm mb-4">
                 Donated: ${ngo.donatedAmount} / ${ngo.donationGoal}
               </p>
-              <Button
-                variant="outline"
-                onClick={() => setSelectedNGO(ngo.id)}
-                className="w-full mb-2"
-              >
-                Select for Donation
-              </Button>
+              <div className="w-1/2 mx-auto mb-2">
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    if (selectedNGO === ngo.id) {
+                      setSelectedNGO(null);
+                    } else {
+                      setSelectedNGO(ngo.id);
+                      setDonationAmount(0);
+                    }
+                  }}
+                  className="w-full"
+                >
+                  Select for Donation
+                </Button>
+              </div>
               {selectedNGO === ngo.id && (
-                <div className="mt-4">
+                <div className="mt-4 w-1/2 mx-auto">
                   <input
                     type="number"
                     value={donationAmount}
