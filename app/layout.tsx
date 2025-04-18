@@ -1,10 +1,11 @@
 import "./globals.css";
-import '@coinbase/onchainkit/styles.css'; 
+import "@coinbase/onchainkit/styles.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import { Toaster } from "@/components/ui/toaster";
 import { MainNav } from "@/components/main-nav";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,17 @@ export default function RootLayout({
           <MainNav />
           {children}
           <Toaster />
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </body>
       </Providers>
     </html>

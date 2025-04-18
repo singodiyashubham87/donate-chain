@@ -5,12 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import IntegrateWallet from "@/components/integrate-wallet";
 import { ethers } from "ethers";
 import { useWallet } from "../../context/WalletContext";
 import contractABI from "../../contracts/abi";
+import { toast } from "react-toastify";
 
-// Mock data for NGOs (replace with real data from Base blockchain or API)
 const mockNGOs = [
   {
     id: 1,
@@ -44,8 +43,6 @@ const mockNGOs = [
   },
 ];
 
-// Simulated Base wallet connection (replace with real integration)
-
 const NGOs = () => {
   const [donationAmount, setDonationAmount] = useState<number>(0);
   const [selectedNGO, setSelectedNGO] = useState<number | null>(null);
@@ -56,10 +53,6 @@ const NGOs = () => {
     process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || "";
   const [balance, setBalance] = useState(BigInt(0));
 
-  // const connectWallet = () => {
-  //   setShowWallet(!showWallet);
-  // };
-
   useEffect(() => {
     console.log("Fetching donation data from Base...");
   }, []);
@@ -68,11 +61,7 @@ const NGOs = () => {
     Math.min((donated / goal) * 100, 100);
 
   const handleDonate = async () => {
-    console.log("Donation Amount: ", donationAmount);
-    console.log("Selected NGO: ", selectedNGO);
     if (selectedNGO && donationAmount > 0) {
-      console.log("Selected NGO: ", selectedNGO);
-      console.log("Donation Amount: ", donationAmount);
       try {
         await connectWallet();
 
@@ -87,19 +76,20 @@ const NGOs = () => {
         setContract(contractInstance);
         const tx = await contractInstance.donate(donationAmount);
         console.log("Transaction: ", tx);
-      } catch (error) {
-        alert("Error connecting to wallet: " + error);
-      }
 
-      alert(
-        `Donating ${donationAmount} to ${
-          mockNGOs[selectedNGO - 1].name
-        } at address ${mockNGOs[selectedNGO - 1].address}`
-      );
-      setDonationAmount(0);
-      setSelectedNGO(null);
+        toast.success(
+          `You donated ${donationAmount} to ${
+            mockNGOs[selectedNGO - 1].name
+          } at address ${mockNGOs[selectedNGO - 1].address}`
+        );
+
+        setDonationAmount(0);
+        setSelectedNGO(null);
+      } catch (error) {
+        toast.error(`Error connecting to wallet: ${error}`);
+      }
     } else {
-      alert("Please select an NGO and enter a donation amount.");
+      toast.error("Please select an NGO and enter a donation amount.");
     }
   };
 
@@ -111,10 +101,6 @@ const NGOs = () => {
         Browse through our list of trusted organizations and make a difference
         today using Base blockchain for transparency.
       </p>
-
-      {/* <div className="text-center mb-12 w-full flex justify-center">
-        <IntegrateWallet />
-      </div> */}
 
       {/* NGO List */}
       <div className="grid gap-6 grid-cols-1 w-1/2 mx-auto">
