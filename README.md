@@ -13,7 +13,7 @@
   Every donation is streamed in real-time using **Fluvio**, enabling dynamic dashboards and instant visibility.
 
 - 📈 **Analytics Dashboard**  
-  Visualize donation volume, top donors all over, trending causes, and fundraising goals using real-time Fluvio data.
+  Visualize donation volume, top donors, trending causes, and fundraising goals using real-time Fluvio data.
 
 ---
 
