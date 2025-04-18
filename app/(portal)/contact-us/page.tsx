@@ -40,7 +40,7 @@ const ContactUs = () => {
       </p>
 
       {/* Contact Information */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12 w-2/3 mx-auto">
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">

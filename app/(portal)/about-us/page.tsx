@@ -11,36 +11,29 @@ const milestones = [
   {
     id: 1,
     title: "Platform Launch",
-    date: "Jan 2025",
+    date: "Apr 2025",
     description: "Launched DonateChain on Base Devnet",
   },
   {
     id: 2,
     title: "First Donation",
-    date: "Feb 2025",
+    date: "Apr 2025",
     description: "First transparent donation recorded",
   },
   {
     id: 3,
     title: "100 NGOs Onboarded",
-    date: "Mar 2025",
+    date: "May 2025",
     description: "Reached 100 verified Indian NGOs",
   },
 ];
 
 const team = [
-  { id: 1, name: "Shubham Singodiya", role: "Full-Stack Developer" },
+  { id: 1, name: "Shubham Singodiya", role: "Software Engineer" },
   { id: 2, name: "Kashika Gupta", role: "UI/UX Designer" },
   { id: 3, name: "Vidip Ghosh", role: "Full-Stack + Blockchain Developer" },
   { id: 4, name: "Ayush Yadav", role: "Full-Stack + Blockchain Developer" },
 ];
-
-const connectWallet = () => {
-  alert(
-    "Connecting to Base wallet... (Placeholder for @base-labs/wallet-adapter)"
-  );
-  // Integrate with Base wallet adapter here
-};
 
 const AboutUs = () => {
   return (
@@ -54,7 +47,7 @@ const AboutUs = () => {
       </p>
 
       {/* Mission and Vision */}
-      <div className="grid gap-6 md:grid-cols-2 mb-12">
+      <div className="grid gap-6 md:grid-cols-1 mb-12 w-1/2 mx-auto">
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -86,19 +79,6 @@ const AboutUs = () => {
         </Card>
       </div>
 
-      {/* Connect Wallet Section */}
-      <div className="text-center mb-12">
-        <Button
-          onClick={connectWallet}
-          className="bg-purple-600 hover:bg-purple-700 text-white"
-        >
-          <Globe className="mr-2 h-4 w-4" /> Connect Wallet
-        </Button>
-        <p className="text-sm text-muted-foreground mt-2">
-          Explore our platform securely with your wallet.
-        </p>
-      </div>
-
       {/* Creative Usage Tracking - Milestone Timeline */}
       <div className="mb-12">
         <h2 className="text-2xl font-semibold text-center mb-6">Our Journey</h2>
@@ -112,7 +92,7 @@ const AboutUs = () => {
               }`}
             >
               <div className="w-1/2" />
-              <div className="bg-white p-4 rounded-lg shadow-md relative z-10 w-1/3">
+              <div className="bg-gray-800 p-4 rounded-lg shadow-md relative z-10 w-1/3">
                 <h3 className="text-lg font-semibold">{milestone.title}</h3>
                 <p className="text-sm text-muted-foreground">
                   {milestone.date}
@@ -126,7 +106,7 @@ const AboutUs = () => {
       </div>
 
       {/* Team Section */}
-      <div className="mb-12">
+      <div className="mb-12 w-1/2 mx-auto">
         <h2 className="text-2xl font-semibold text-center mb-6">
           Meet Our Team
         </h2>
