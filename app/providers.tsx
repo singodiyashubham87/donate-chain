@@ -27,8 +27,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
           chain={base}
           config={{
             appearance: {
-              mode: "light",
-              theme: "hacker",
+              mode: "auto",
+              theme: "base",
             },
           }}
         >
