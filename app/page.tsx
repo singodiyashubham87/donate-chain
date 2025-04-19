@@ -99,17 +99,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
-      <section className="border-t bg-muted/50 w-full flex flex-col items-center justify-center">
-        <div className="container py-20">
-          <h2 className="mb-12 text-center text-3xl font-bold">
-            What Our Donors Say
-          </h2>
-          <TestimonialCard />
-        </div>
-      </section>
-
       {/* Featured NGOs Section */}
       <section className="border-t w-full bg-muted/50 flex flex-col items-center justify-center">
         <div className="container py-20">
@@ -133,6 +122,15 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      {/* Testimonials Section */}
+      <section className="border-t bg-muted/50 w-full flex flex-col items-center justify-center">
+        <div className="container py-20">
+          <h2 className="mb-12 text-center text-3xl font-bold">
+            What Our Donors Say
+          </h2>
+          <TestimonialCard />
         </div>
       </section>
     </div>
