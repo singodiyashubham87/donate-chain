@@ -2,26 +2,53 @@
 
 **DonateChain** is a decentralized donation platform designed to bring **trust, transparency, and real-time insights** to charitable giving. Powered by **Base** (Ethereum L2), it modernizes how people support NGOs and track the impact of their donations.
 
----
-
-## 🚀 Features
+## 🎯 Core Features
 
 - 🔗 **Blockchain-Based Donations**  
-  Donations are recorded immutably on the **Base** Layer 2 blockchain, ensuring transparency and security.
+  Secure and transparent donations recorded on Base (Ethereum L2), with real-time tracking
+  
+- 🏛️ **Verified Indian NGOs**  
+  Curated list of authenticated NGOs with detailed profiles and impact metrics
 
-- 📈 **Analytics Dashboard**  
-  Visualize donation volume, top donors, trending causes, and fundraising goals using real-time data.
+- 📊 **Analytics Dashboard**  
+  Real-time insights into donation flows, impact metrics, and fundraising progress
 
----
+- 🔐 **Web3 Authentication**  
+  Seamless login via Auth0 and secure wallet connections
 
 ## 🛠 Tech Stack
 
-| Layer            | Technology Used                          |
-|------------------|-------------------------------------------|
-| Frontend         | [Next.js](https://nextjs.org/)            |
-| UI Components    | [ShadCN UI](https://ui.shadcn.com/)       |
-| Styling          | [Tailwind CSS](https://tailwindcss.com/)  |
-| Blockchain       | [Base](https://base.org/) (L2 Ethereum)   |
+| Layer            | Technology                                |
+|------------------|------------------------------------------|
+| Frontend         | [Next.js](https://nextjs.org/) 13.5      |
+| UI Components    | [ShadCN UI](https://ui.shadcn.com/)      |
+| Styling          | [Tailwind CSS](https://tailwindcss.com/) |
+| Blockchain       | [Base](https://base.org/) (L2 Ethereum)  |
+| Authentication   | [Auth0](https://auth0.com/)              |
+| Web3            | [OnchainKit](https://onchainkit.com/)    |
 
+## 🚀 Getting Started
+
+1. Clone the repository
+2. Copy `.env.example` to `.env` and fill in:
+   - Auth0 credentials
+   - Base/OnchainKit API keys
+   - Contract addresses
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run development server:
+   ```bash
+   npm run dev
+   ```
+
+## 💡 Key Features in Development
+
+- Real-time donation tracking
+- NGO verification system
+- Impact measurement metrics
+- Donor analytics dashboard
+- Mobile-responsive design
 
 > Built with ❤️ by Team Exception Handlers! ✨
