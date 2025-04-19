@@ -37,8 +37,12 @@ export async function generateStaticParams() {
   return ngos.map((ngo) => ({ slug: ngo.slug }));
 }
 
-export default function NgoProfile({ params }: { params: { slug: string } }) {
-  const ngo = ngos.find((n) => n.slug === params.slug);
+// In Next.js 15, params is a Promise that must be awaited
+export default async function NgoProfile(props: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await props.params;
+  const ngo = ngos.find((n) => n.slug === slug);
 
   if (!ngo) return notFound();
 
