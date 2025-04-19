@@ -22,7 +22,7 @@ export function MainNav() {
       <div className="flex h-16 items-center justify-around">
         <div className="flex">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold">DonateChain</span>
+            <Image src="/logo.png" alt="Logo" width={100} height={10} />
           </Link>
           <nav className="ml-8 flex items-center gap-4 text-sm font-medium">
             <Link
