@@ -46,7 +46,6 @@
 ## 💡 Key Features in Development
 
 - Real-time donation tracking
-- NGO verification system
 - Impact measurement metrics
 - Donor analytics dashboard
 - Mobile-responsive design
